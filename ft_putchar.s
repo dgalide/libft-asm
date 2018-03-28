@@ -2,15 +2,6 @@
 %define STDOUT				1
 %define WRITE				4
 
-section .text
-	global start
-	global _ft_putchar
-	global _main
-
-start:
-	call _main
-	ret
-
 _ft_putchar:
 	push rbp
 	mov rbp, rsp
