@@ -1,3 +1,6 @@
+section .text
+global _ft_putchar
+
 %define MACH_SYSCALL(nb)	0x2000000 | nb
 %define STDOUT				1
 %define WRITE				4
