@@ -3,14 +3,18 @@ global _ft_isupper
 
 _ft_isupper:
 	cmp rdi, 65
-	js false
+	jl false
 	cmp rdi, 91
-	js true
+	jl true
+	jmp false
 
 true:
 	mov rax, 1
-	ret
+	jmp out
 
 false:
 	mov rax, 0
+	jmp out
+
+out:
 	ret

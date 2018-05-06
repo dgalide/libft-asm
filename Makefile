@@ -6,7 +6,7 @@
 #    By: dgalide <dgalide@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/11/30 17:42:00 by dgalide           #+#    #+#              #
-#    Updated: 2018/04/11 12:40:45 by dgalide          ###   ########.fr        #
+#    Updated: 2018/04/11 12:47:36 by dgalide          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,6 +15,7 @@ NAME = libft.a
 SRC += ft_putchar.s
 SRC += ft_isupper.s
 SRC += ft_islower.s
+SRC += ft_isdigit.s
 
 INC = includes/libft.h
 SRCO = $(SRC:.s=.o)
