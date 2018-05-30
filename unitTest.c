@@ -10,6 +10,7 @@ int		ft_isdigit(char c);
 int 	ft_strlen(char *str);
 int		ft_puts(char *str);
 void	ft_bzero(const void *s1, size_t n);
+void	*ft_memset(void *b, int c, size_t len);
 
 int main()
 {
@@ -19,5 +20,6 @@ int main()
 	d1 = (char *)malloc(sizeof(char) * 10);
 	d2 = (char *)malloc(sizeof(char) * 10);
 
-	ft_bzero((char *)d1, 10);
+	memset((char *)d1, 42, 9);
+	ft_memset((char *)d1, 42, 9);
 }
