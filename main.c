@@ -10,6 +10,8 @@ int		ft_isdigit(char c);
 int 	ft_strlen(char *str);
 int		ft_puts(char *str);
 void	ft_bzero(const void *s1, size_t n);
+void	*ft_memcpy(void *restrict dst, const void *restrict src, size_t n);
+char 	*ft_strdup(const char *s1);
 
 void	int_checker(int a, int b, char *function_name, int attempt)
 {
