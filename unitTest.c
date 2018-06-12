@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
+#include <fcntl.h>
 
 int 	ft_putchar(char c);
 int 	ft_isupper(char c);
@@ -14,24 +15,24 @@ void	*ft_memset(void *b, int c, size_t len);
 void	*ft_memcpy(void *restrict dst, const void *restrict src, size_t n);
 char 	*ft_strdup(const char *s1);
 char	*ft_strcat(char *restrict s1, const char *restrict s2);
+void	ft_cat(int fd);
+int		ft_isalpha(char c);
+int		ft_isalnum(char c);
+int		ft_isascii(char c);
+int		ft_isprint(char c);
+int		ft_tolower(char c);
+int		ft_toupper(char c);
 
-int main()
+int main(int ac, char **av)
 {
 	void	*d1;
 	void	*d2;
 	char	*d3;
+	int		fd;
 
 	d1 = (char *)malloc(sizeof(char) * 6);
 	d2 = (char *)malloc(sizeof(char) * 6);
 
-	memcpy(d1, "Hello\0", 15);
-	memcpy(d2, "Bello\0", 6);
-
-	d3 = ft_strcat(d1,d2);
-	// ft_memcpy(d2, d1, 6);
-
-	// printf("%s\n", d2);
-
-	// ft_strlen("Hello");
-	printf("%s\n", d3);
+	char c = ft_tolower('A');
+	printf("%c\n", c);
 }
