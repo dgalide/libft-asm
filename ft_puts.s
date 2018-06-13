@@ -18,8 +18,10 @@ _ft_puts:
 	mov rsi, rdi
 	mov rdi, STDOUT
 	mov rax, MACH_SYSCALL(WRITE)
+	mov	r8, rax
 	syscall
 	mov rdi, 0x0a
 	call _ft_putchar
+	mov rax, r8
 	leave
 	ret

@@ -17,7 +17,7 @@ loop:
 end:
 	pop			rsi
 	pop			rdi
-	mov			rax, rsi 			; output
+	mov			rax, rdi 			; output
 	ret
 
 zero_n:

@@ -1,31 +1,28 @@
 section 	.text
 global		_ft_strcat
-extern		_ft_strlen
-extern		_ft_memcpy
 
 _ft_strcat:
 
 	mov		rax, rdi
-	call	shifter
 
 shifter:
 
-	cmp [rdi], byte 0
-    jz copy
+	cmp byte [rdi], 0
+    je copy
     inc rdi
     jmp shifter
 
 copy:
 
-	cmp [rsi], byte 0
+	cmp byte [rsi], 0
     je end
-    mov r8, [rsi]
-    mov [rdi], r8
+    mov r11, [rsi]
+    mov [rdi], r11
     inc rdi
     inc rsi
     jmp copy
 
 end:
 
-	mov 	[rdi], byte 0
+	mov byte	[rdi], 0
 	ret
